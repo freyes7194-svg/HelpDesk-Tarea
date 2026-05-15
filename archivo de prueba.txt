@@ -12,3 +12,5 @@ Git for Windows/x64 Portable.
 Git for Windows/ARM64 Portable.
 
 Using winget tool
+
+Modificado por Alexandra
