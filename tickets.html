@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="title" content="Tickets Registrados">
+    <meta name="description" content="Listado organizado de tickets registrados en el sistema Help Desk">
+    <title>Tickets Registrados - Help Desk</title>
+</head>
+
+<body>
+
+    <header>
+        <h1>Tickets Registrados</h1>
+        <p>Listado de incidentes reportados en el sistema Help Desk</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reportar.html">Reportar incidente</a></li>
+            <li><a href="tickets.html">Tickets registrados</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <section>
+            <h2>Tabla de tickets</h2>
+
+            <article>
+                <h3>Listado de incidentes</h3>
+
+                <p>En esta sección se muestran los incidentes registrados en el sistema.</p>
+
+                <table>
+                    <caption>Registro general de tickets Help Desk</caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Código</th>
+                            <th scope="col">Título</th>
+                            <th scope="col">Categoría</th>
+                            <th scope="col">Prioridad</th>
+                            <th scope="col">Estado</th>
+                            <th scope="col">Fecha</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th scope="row">HD-001</th>
+                            <td>Falla de conexión a Internet</td>
+                            <td>Red</td>
+                            <td>Alta</td>
+                            <td>Abierto</td>
+                            <td>10/06/2026</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">HD-002</th>
+                            <td>Computador no enciende</td>
+                            <td>Hardware</td>
+                            <td>Media</td>
+                            <td>En proceso</td>
+                            <td>11/06/2026</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">HD-003</th>
+                            <td>Error al abrir el sistema académico</td>
+                            <td>Software</td>
+                            <td>Alta</td>
+                            <td>Abierto</td>
+                            <td>12/06/2026</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">HD-004</th>
+                            <td>Impresora no responde</td>
+                            <td>Hardware</td>
+                            <td>Baja</td>
+                            <td>Cerrado</td>
+                            <td>13/06/2026</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </article>
+        </section>
+
+        <section>
+            <h2>Estados de atención</h2>
+
+            <article>
+                <h3>Clasificación de tickets</h3>
+
+                <ul>
+                    <li><strong>Abierto:</strong> el incidente fue registrado y espera atención.</li>
+                    <li><strong>En proceso:</strong> el incidente está siendo revisado por soporte.</li>
+                    <li><strong>Cerrado:</strong> el incidente fue solucionado.</li>
+                </ul>
+
+                <p>
+                    <a href="reportar.html">Registrar un nuevo incidente</a>
+                </p>
+            </article>
+        </section>
+
+    </main>
+
+    <aside>
+        <h2>Nota</h2>
+        <p>La tabla permite visualizar de manera organizada los incidentes registrados.</p>
+    </aside>
+
+    <footer>
+        <p>&copy; 2026 Sistema Help Desk - Desarrollo de Sistemas Informáticos</p>
+    </footer>
+
+</body>
+
+</html>

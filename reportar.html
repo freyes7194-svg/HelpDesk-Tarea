@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="title" content="Reportar Incidente">
+    <meta name="description" content="Formulario para reportar incidentes en el sistema Help Desk">
+    <title>Reportar Incidente - Help Desk</title>
+</head>
+<body>
+
+    <header>
+        <h1>Reportar Incidente</h1>
+        <p>Formulario de ingreso de incidentes del sistema Help Desk</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="reportar.html">Reportar incidente</a></li>
+            <li><a href="tickets.html">Tickets registrados</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Formulario de registro</h2>
+            <article>
+                <h3>Datos del usuario</h3>
+                <form action="tickets.html" method="get">
+                    <fieldset>
+                        <legend>Información del solicitante</legend>
+                        <p>
+                            <label for="nombre">Nombre del usuario:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </p>
+                        <p>
+                            <label for="correo">Correo electrónico:</label>
+                            <input type="email" id="correo" name="correo" required>
+                        </p>
+                        <p>
+                            <label for="area">Área o departamento:</label>
+                            <input type="text" id="area" name="area" required>
+                        </p>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Información del incidente</legend>
+                        <p>
+                            <label for="titulo">Título del incidente:</label>
+                            <input type="text" id="titulo" name="titulo" required>
+                        </p>
+                        <p>
+                            <label for="categoria">Categoría:</label>
+                            <select id="categoria" name="categoria" required>
+                                <option value="">Seleccione una categoría</option>
+                                <option value="red">Red</option>
+                                <option value="hardware">Hardware</option>
+                                <option value="software">Software</option>
+                            </select>
+                        </p>
+
+                        <fieldset>
+                            <legend>Prioridad</legend>
+                            <p><input type="radio" id="alta" name="prioridad" value="Alta" required><label for="alta">Alta</label></p>
+                            <p><input type="radio" id="media" name="prioridad" value="Media"><label for="media">Media</label></p>
+                            <p><input type="radio" id="baja" name="prioridad" value="Baja"><label for="baja">Baja</label></p>
+                        </fieldset>
+
+                        <p>
+                            <label for="descripcion">Descripción detallada:</label>
+                            <textarea id="descripcion" name="descripcion" rows="6" required></textarea>
+                        </p>
+                    </fieldset>
+
+                    <p>
+                        <button type="submit">Enviar incidente</button>
+                        <button type="reset">Limpiar formulario</button>
+                    </p>
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <aside>
+        <h2>Recomendación</h2>
+        <p>Describa claramente el problema, el equipo afectado y desde cuándo ocurre.</p>
+    </aside>
+
+    <footer>
+        <p>&copy; 2026 Sistema Help Desk - Desarrollo de Sistemas Informáticos</p>
+    </footer>
+
+</body>
+</html>
