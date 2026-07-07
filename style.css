@@ -1,0 +1,435 @@
+/*
+  UI Kit Help Desk
+  Unidad III: Estilo de un documento web y diseño adaptable
+  Carrera de Tecnologías de la Información
+*/
+
+/* Variables principales del Design System */
+:root {
+  --color-primary: #0f172a;
+  --color-primary-light: #1e293b;
+
+  --color-secondary: #2563eb;
+  --color-secondary-dark: #1d4ed8;
+
+  --color-accent: #06b6d4;
+  --color-accent-dark: #0891b2;
+
+  --color-success: #16a34a;
+  --color-success-bg: #dcfce7;
+
+  --color-warning: #f59e0b;
+  --color-warning-bg: #fef3c7;
+
+  --color-danger: #dc2626;
+  --color-danger-dark: #991b1b;
+  --color-danger-bg: #fee2e2;
+
+  --color-background: #f1f5f9;
+  --color-surface: #ffffff;
+  --color-text: #0f172a;
+  --color-muted: #64748b;
+  --color-border: #cbd5e1;
+
+  --font-main: "Segoe UI", Arial, Helvetica, sans-serif;
+
+  --radius-small: 4px;
+  --radius-medium: 6px;
+
+  --shadow-normal: 0 6px 16px rgba(15, 23, 42, 0.10);
+  --shadow-hover: 0 12px 28px rgba(15, 23, 42, 0.16);
+
+  --transition: all 0.25s ease;
+}
+
+/* Modelo de caja global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--color-background);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+button,
+input,
+select {
+  font-family: inherit;
+}
+
+.container {
+  width: min(1120px, 92%);
+  margin: 0 auto;
+}
+
+/* Encabezado principal */
+.hero {
+  padding: 3rem 0;
+  color: #ffffff;
+  background:
+    linear-gradient(rgba(15, 23, 42, 0.92), rgba(15, 23, 42, 0.92)),
+    linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  border-bottom: 6px solid var(--color-accent);
+}
+
+.hero-content {
+  text-align: center;
+}
+
+.institution {
+  display: inline-block;
+  margin-bottom: 1rem;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--radius-small);
+  background-color: rgba(255, 255, 255, 0.08);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
+
+.hero h1 {
+  margin-bottom: 0.8rem;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.hero-text {
+  max-width: 720px;
+  margin: 0 auto;
+  color: #dbeafe;
+}
+
+/* Secciones */
+.section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  box-shadow: var(--shadow-normal);
+}
+
+.section-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.section-number {
+  min-width: 48px;
+  padding: 0.55rem;
+  border-radius: var(--radius-small);
+  background-color: var(--color-primary);
+  color: #ffffff;
+  text-align: center;
+  font-weight: 800;
+}
+
+.section h2 {
+  margin-bottom: 0.35rem;
+  color: var(--color-primary);
+}
+
+.section p {
+  color: var(--color-muted);
+}
+
+/* Paleta de colores */
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+  gap: 1rem;
+}
+
+.color-card {
+  min-height: 90px;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  border-radius: var(--radius-small);
+  color: #ffffff;
+  font-weight: 800;
+  text-align: center;
+  box-shadow: var(--shadow-normal);
+}
+
+.color-primary {
+  background-color: var(--color-primary);
+}
+
+.color-secondary {
+  background-color: var(--color-secondary);
+}
+
+.color-accent {
+  background-color: var(--color-accent);
+  color: #083344;
+}
+
+.color-success {
+  background-color: var(--color-success);
+}
+
+.color-warning {
+  background-color: var(--color-warning);
+  color: #1f2937;
+}
+
+.color-danger {
+  background-color: var(--color-danger);
+}
+
+/* Botones */
+.button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.btn {
+  min-height: 44px;
+  padding: 0.75rem 1.25rem;
+  border: none;
+  border-radius: var(--radius-small);
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-primary {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-secondary-dark);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background-color: var(--color-primary);
+  color: #ffffff;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary-light);
+  transform: translateY(-2px);
+}
+
+.btn-danger {
+  background-color: var(--color-danger);
+  color: #ffffff;
+}
+
+.btn-danger:hover {
+  background-color: var(--color-danger-dark);
+  transform: translateY(-2px);
+}
+
+.btn:focus,
+.btn:focus-visible {
+  outline: 3px solid rgba(6, 182, 212, 0.45);
+  outline-offset: 3px;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* Formularios */
+.form-panel {
+  max-width: 680px;
+  padding: 1.3rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  background-color: #f8fafc;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: var(--color-primary);
+  font-weight: 800;
+}
+
+.form-control {
+  width: 100%;
+  min-height: 44px;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-small);
+  background-color: #ffffff;
+  color: var(--color-text);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-control::placeholder {
+  color: #94a3b8;
+}
+
+.form-control:hover {
+  border-color: var(--color-accent);
+}
+
+.form-control:focus {
+  border-color: var(--color-secondary);
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.16);
+}
+
+/* Tarjetas de tickets */
+.ticket-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.ticket-card {
+  padding: 1.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-medium);
+  background-color: var(--color-surface);
+  box-shadow: var(--shadow-normal);
+  transition: var(--transition);
+}
+
+.ticket-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--color-accent);
+}
+
+.ticket-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.ticket-top h3 {
+  margin-bottom: 0;
+  color: var(--color-primary);
+  font-size: 1.1rem;
+}
+
+.ticket-card p {
+  color: var(--color-muted);
+}
+
+.ticket-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-muted);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* Badges */
+.badge {
+  display: inline-block;
+  padding: 0.3rem 0.65rem;
+  border-radius: var(--radius-small);
+  font-size: 0.78rem;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.badge-high {
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger-dark);
+}
+
+.badge-medium {
+  background-color: var(--color-warning-bg);
+  color: #92400e;
+}
+
+.badge-low {
+  background-color: var(--color-success-bg);
+  color: #166534;
+}
+
+/* Alertas */
+.alert {
+  margin-top: 1rem;
+  padding: 1rem;
+  border-left: 6px solid;
+  border-radius: var(--radius-small);
+  font-weight: 800;
+}
+
+.alert-success {
+  background-color: var(--color-success-bg);
+  color: #166534;
+  border-color: var(--color-success);
+}
+
+.alert-warning {
+  background-color: var(--color-warning-bg);
+  color: #92400e;
+  border-color: var(--color-warning);
+}
+
+.alert-danger {
+  background-color: var(--color-danger-bg);
+  color: var(--color-danger-dark);
+  border-color: var(--color-danger);
+}
+
+/* Pie de página */
+.footer {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--color-muted);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .section {
+    padding: 1rem;
+  }
+
+  .section-header {
+    flex-direction: column;
+  }
+
+  .button-wrapper {
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .ticket-top,
+  .ticket-info {
+    flex-direction: column;
+  }
+}

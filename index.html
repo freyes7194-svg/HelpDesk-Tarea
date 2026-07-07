@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UI Kit Help Desk - TIC</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="container hero-content">
+      <p class="institution">Universidad Técnica de Manabí</p>
+      <h1>Design System para Sistema Help Desk</h1>
+      <p class="hero-text">
+        Librería de componentes UI reutilizables desarrollada con HTML5 y CSS3 puro.
+      </p>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <section class="section">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <div>
+          <h2>Paleta de colores corporativa</h2>
+          <p>Colores definidos mediante variables CSS para mantener una identidad visual uniforme.</p>
+        </div>
+      </div>
+
+      <div class="color-grid">
+        <div class="color-card color-primary">Primario</div>
+        <div class="color-card color-secondary">Secundario</div>
+        <div class="color-card color-accent">Acento</div>
+        <div class="color-card color-success">Éxito</div>
+        <div class="color-card color-warning">Advertencia</div>
+        <div class="color-card color-danger">Peligro</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <div>
+          <h2>Botones del sistema</h2>
+          <p>Botones reutilizables para acciones principales, secundarias y críticas.</p>
+        </div>
+      </div>
+
+      <div class="button-wrapper">
+        <button class="btn btn-primary">Crear ticket</button>
+        <button class="btn btn-secondary">Ver detalles</button>
+        <button class="btn btn-danger">Cancelar ticket</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <div>
+          <h2>Formulario de registro</h2>
+          <p>Campos diseñados para registrar incidentes de manera clara y ordenada.</p>
+        </div>
+      </div>
+
+      <form class="form-panel">
+        <div class="form-group">
+          <label for="nombre">Nombre del usuario</label>
+          <input 
+            type="text" 
+            id="nombre" 
+            class="form-control" 
+            placeholder="Ej. Carlos Mendoza"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="correo">Correo institucional</label>
+          <input 
+            type="email" 
+            id="correo" 
+            class="form-control" 
+            placeholder="usuario@utm.edu.ec"
+            required
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="departamento">Departamento</label>
+          <select id="departamento" class="form-control" required>
+            <option value="">Seleccione una opción</option>
+            <option value="sistemas">Sistemas</option>
+            <option value="administrativo">Administrativo</option>
+            <option value="soporte">Soporte técnico</option>
+            <option value="laboratorio">Laboratorio</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="prioridad">Prioridad del incidente</label>
+          <select id="prioridad" class="form-control" required>
+            <option value="">Seleccione la prioridad</option>
+            <option value="alta">Alta</option>
+            <option value="media">Media</option>
+            <option value="baja">Baja</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Registrar incidente</button>
+      </form>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <div>
+          <h2>Tarjetas de tickets</h2>
+          <p>Cards para mostrar información resumida de los incidentes registrados.</p>
+        </div>
+      </div>
+
+      <div class="ticket-grid">
+
+        <article class="ticket-card">
+          <div class="ticket-top">
+            <h3>Servidor sin respuesta</h3>
+            <span class="badge badge-high">Alta</span>
+          </div>
+
+          <p>
+            El servidor principal no responde a las solicitudes de conexión del sistema.
+          </p>
+
+          <div class="ticket-info">
+            <span>Ticket: #HD-201</span>
+            <span>Área: Redes</span>
+          </div>
+        </article>
+
+        <article class="ticket-card">
+          <div class="ticket-top">
+            <h3>Actualización de software</h3>
+            <span class="badge badge-medium">Media</span>
+          </div>
+
+          <p>
+            Se requiere actualizar el sistema operativo de los equipos del laboratorio.
+          </p>
+
+          <div class="ticket-info">
+            <span>Ticket: #HD-202</span>
+            <span>Área: Software</span>
+          </div>
+        </article>
+
+        <article class="ticket-card">
+          <div class="ticket-top">
+            <h3>Consulta de usuario</h3>
+            <span class="badge badge-low">Baja</span>
+          </div>
+
+          <p>
+            El usuario solicita información sobre el estado de su cuenta institucional.
+          </p>
+
+          <div class="ticket-info">
+            <span>Ticket: #HD-203</span>
+            <span>Área: Usuarios</span>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <span class="section-number">05</span>
+        <div>
+          <h2>Alertas del sistema</h2>
+          <p>Mensajes visuales para informar acciones importantes dentro del Help Desk.</p>
+        </div>
+      </div>
+
+      <div class="alert alert-success">
+        El incidente fue registrado correctamente.
+      </div>
+
+      <div class="alert alert-warning">
+        Revise la información antes de continuar con el proceso.
+      </div>
+
+      <div class="alert alert-danger">
+        No se pudo cancelar el ticket seleccionado.
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>UI Kit profesional desarrollado con CSS3 puro | Carrera de Tecnologías de la Información</p>
+  </footer>
+
+</body>
+</html>
