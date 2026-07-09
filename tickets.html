@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="Tickets Registrados">
+  <meta name="description" content="Listado organizado de tickets registrados en el sistema Help Desk">
+  <title>Tickets Registrados - Help Desk</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero hero-small">
+    <div class="container hero-content">
+      <p class="institution">Universidad Técnica de Manabí</p>
+      <h1>Tickets Registrados</h1>
+      <p class="hero-text">Listado de incidentes reportados en el sistema Help Desk.</p>
+    </div>
+  </header>
+
+  <nav class="site-nav" aria-label="Navegación principal">
+    <div class="container nav-container">
+      <a class="brand" href="index.html">Help Desk TIC</a>
+      <ul class="nav-list">
+        <li><a class="nav-link" href="index.html">Inicio</a></li>
+        <li><a class="nav-link" href="reportar.html">Reportar incidente</a></li>
+        <li><a class="nav-link active" href="tickets.html">Tickets registrados</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container page-layout">
+    <main class="content-area">
+      <section class="section">
+        <div class="section-header">
+          <span class="section-number">01</span>
+          <div>
+            <h2>Tabla de tickets</h2>
+            <p>Registro general de incidentes reportados en el sistema.</p>
+          </div>
+        </div>
+
+        <article class="table-card">
+          <h3>Listado de incidentes</h3>
+          <p>En esta sección se muestran los incidentes registrados en el sistema.</p>
+
+          <div class="table-responsive">
+            <table class="helpdesk-table">
+              <caption>Registro general de tickets Help Desk</caption>
+
+              <thead>
+                <tr>
+                  <th scope="col">Código</th>
+                  <th scope="col">Título</th>
+                  <th scope="col">Categoría</th>
+                  <th scope="col">Prioridad</th>
+                  <th scope="col">Estado</th>
+                  <th scope="col">Fecha</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <th scope="row" data-label="Código">HD-001</th>
+                  <td data-label="Título">Falla de conexión a Internet</td>
+                  <td data-label="Categoría">Red</td>
+                  <td data-label="Prioridad"><span class="badge badge-high">Alta</span></td>
+                  <td data-label="Estado"><span class="status status-open">Abierto</span></td>
+                  <td data-label="Fecha">10/06/2026</td>
+                </tr>
+
+                <tr>
+                  <th scope="row" data-label="Código">HD-002</th>
+                  <td data-label="Título">Computador no enciende</td>
+                  <td data-label="Categoría">Hardware</td>
+                  <td data-label="Prioridad"><span class="badge badge-medium">Media</span></td>
+                  <td data-label="Estado"><span class="status status-process">En proceso</span></td>
+                  <td data-label="Fecha">11/06/2026</td>
+                </tr>
+
+                <tr>
+                  <th scope="row" data-label="Código">HD-003</th>
+                  <td data-label="Título">Error al abrir el sistema académico</td>
+                  <td data-label="Categoría">Software</td>
+                  <td data-label="Prioridad"><span class="badge badge-high">Alta</span></td>
+                  <td data-label="Estado"><span class="status status-open">Abierto</span></td>
+                  <td data-label="Fecha">12/06/2026</td>
+                </tr>
+
+                <tr>
+                  <th scope="row" data-label="Código">HD-004</th>
+                  <td data-label="Título">Impresora no responde</td>
+                  <td data-label="Categoría">Hardware</td>
+                  <td data-label="Prioridad"><span class="badge badge-low">Baja</span></td>
+                  <td data-label="Estado"><span class="status status-closed">Cerrado</span></td>
+                  <td data-label="Fecha">13/06/2026</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </article>
+      </section>
+
+      <section class="section">
+        <div class="section-header">
+          <span class="section-number">02</span>
+          <div>
+            <h2>Estados de atención</h2>
+            <p>Clasificación utilizada para el seguimiento de cada ticket.</p>
+          </div>
+        </div>
+
+        <div class="ticket-grid">
+          <article class="ticket-card">
+            <div class="ticket-top">
+              <h3>Abierto</h3>
+              <span class="status status-open">Nuevo</span>
+            </div>
+            <p>El incidente fue registrado y espera atención.</p>
+          </article>
+
+          <article class="ticket-card">
+            <div class="ticket-top">
+              <h3>En proceso</h3>
+              <span class="status status-process">Revisión</span>
+            </div>
+            <p>El incidente está siendo revisado por soporte.</p>
+          </article>
+
+          <article class="ticket-card">
+            <div class="ticket-top">
+              <h3>Cerrado</h3>
+              <span class="status status-closed">Finalizado</span>
+            </div>
+            <p>El incidente fue solucionado y documentado.</p>
+          </article>
+        </div>
+
+        <div class="button-wrapper mt-1">
+          <a class="btn btn-primary" href="reportar.html">Registrar un nuevo incidente</a>
+        </div>
+      </section>
+    </main>
+
+    <aside class="sidebar">
+      <article class="alert alert-warning">
+        <h2>Nota</h2>
+        <p>La tabla permite visualizar de manera organizada los incidentes registrados. En móviles se transforma en tarjetas para evitar desbordamiento horizontal.</p>
+      </article>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <p>&copy; 2026 Sistema Help Desk - Desarrollo de Sistemas Informáticos</p>
+  </footer>
+
+</body>
+</html>
